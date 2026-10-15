@@ -1,0 +1,908 @@
+
+# ⚡ PulseAnalytics — Team Analytics Dashboard
+
+A modern, responsive team analytics dashboard designed to help organizations monitor employee performance, manage goals and KPIs, track attendance, analyze departmental productivity, and generate business reports from a centralized interface.
+
+🌐 **Live Demo:** https://analyticsdashb.netlify.app/
+
+---
+
+## 📌 Table of Contents
+
+- [Overview](#-overview)
+- [Project Objectives](#-project-objectives)
+- [Live Demo](#-live-demo)
+- [Key Features](#-key-features)
+- [Dashboard Modules](#-dashboard-modules)
+- [User Roles and Permissions](#-user-roles-and-permissions)
+- [Dashboard Analytics and KPIs](#-dashboard-analytics-and-kpis)
+- [Employee Management](#-employee-management)
+- [Goals and KPI Tracking](#-goals-and-kpi-tracking)
+- [Attendance Management](#-attendance-management)
+- [Reports and Data Export](#-reports-and-data-export)
+- [User Interface and Experience](#-user-interface-and-experience)
+- [Technologies Used](#-technologies-used)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Installation and Setup](#-installation-and-setup)
+- [How to Use](#-how-to-use)
+- [Data and Storage](#-data-and-storage)
+- [Deployment](#-deployment)
+- [Security Considerations](#-security-considerations)
+- [Limitations](#-limitations)
+- [Future Improvements](#-future-improvements)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
+
+---
+
+## 📖 Overview
+
+**PulseAnalytics** is a web-based Team Analytics Dashboard that provides a centralized interface for viewing and managing workforce information.
+
+The application combines employee directory management, departmental performance analytics, goal tracking, attendance monitoring, and report generation in a single dashboard.
+
+It is designed for administrators, HR managers, department managers, team leads, and employees who need a convenient way to review workforce metrics and organizational progress.
+
+The dashboard uses a clean sidebar navigation layout, interactive charts, summary cards, searchable tables, filter controls, modal forms, notifications, and configurable display preferences.
+
+Its responsive interface is intended to make workforce analytics easier to access across desktop and mobile devices.
+
+### Main Goals
+
+- Centralize employee and team information.
+- Monitor workforce performance through visual analytics.
+- Track employee goals and key performance indicators.
+- Review daily attendance and workforce availability.
+- Compare departmental performance.
+- Generate and export workforce reports.
+- Provide role-oriented dashboard experiences.
+- Offer a modern interface with light and dark themes.
+
+---
+
+## 🎯 Project Objectives
+
+PulseAnalytics aims to simplify the way organizations review workforce data.
+
+### 1. Centralized Workforce Information
+Provide a single interface for accessing employee records, departments, job roles, performance scores, and goal completion metrics.
+
+### 2. Performance Monitoring
+Display employee and department performance through KPI cards, comparison charts, and trend visualizations.
+
+### 3. Goal Management
+Allow users with appropriate permissions to create goals, assign owners, set priorities, define deadlines, and update progress.
+
+### 4. Attendance Visibility
+Present attendance information, including presence, remote work, late arrivals, leave, and attendance rates.
+
+### 5. Reporting and Exporting
+Provide report generation interfaces and export options for datasets in CSV, JSON, and PDF formats.
+
+### 6. Improved User Experience
+Use consistent navigation, searchable tables, modal dialogs, responsive layouts, and theme customization to make the dashboard easier to use.
+
+---
+
+## 🌐 Live Demo
+
+Explore the deployed application:
+
+**https://analyticsdashb.netlify.app/**
+
+The live website provides an interactive demonstration of the dashboard interface and its available features.
+
+> Note: The availability of specific features and the persistence of changes depend on the application's current JavaScript implementation and storage configuration.
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|---|---|
+| Interactive Dashboard | Centralized overview of workforce metrics |
+| KPI Summary Cards | Employee count, performance, goal completion, and engagement |
+| Performance Charts | Team trends and performance distribution |
+| Department Analytics | Department-level scores and comparisons |
+| Employee Directory | Searchable employee records and management actions |
+| Goal Management | Create, edit, and track organizational goals |
+| Attendance Dashboard | Monitor attendance status, work mode, and check-in information |
+| Attendance Filters | Filter records by department, status, and employee name |
+| Report Management | Create and manage report definitions |
+| Data Export | Export supported datasets to CSV, JSON, or PDF |
+| Role Selector | Preview different role-oriented dashboard experiences |
+| Theme Switching | Toggle between light and dark themes |
+| Notifications | View notifications and mark them as read |
+| Global Search | Search for employees and KPIs |
+| Responsive Layout | Adapt the interface to different screen sizes |
+| Modal Forms | Add and edit records through dialog-based forms |
+| Data Reset | Reset application data through the settings interface |
+
+---
+
+## 🧭 Dashboard Modules
+
+PulseAnalytics is organized into seven primary modules.
+
+### 1. Overview Dashboard
+
+The Overview page serves as the main entry point to the application.
+
+It provides a high-level summary of workforce performance and organizational activity.
+
+**KPI cards include:**
+
+- Total Employees
+- Average Performance
+- Goal Completion
+- Engagement Score
+
+Each card displays a metric, an icon, and a comparison indicator intended to communicate change against the previous month.
+
+**Charts include:**
+
+- Team Performance Trend
+- Performance Distribution
+
+**Additional functionality:**
+
+- Select a reporting period: last 7, 30, or 90 days.
+- Open the export dialog.
+- Access the Add Employee form when available to the selected role.
+- Review key workforce metrics without navigating through individual records.
+
+The overview is designed to help managers quickly identify performance patterns and areas that may need attention.
+
+### 2. Team Performance
+
+The Team Performance module focuses on comparing departments and reviewing their performance metrics.
+
+**Features:**
+
+- Department performance cards.
+- Department score comparison chart.
+- Visual comparison of departmental results.
+- A centralized view of performance across the organization.
+
+Departments represented in the interface include:
+
+- Engineering
+- Marketing
+- Sales
+- Finance
+- HR
+- Operations
+
+This module is intended to help managers compare teams, recognize strong performance, and identify opportunities for improvement.
+
+### 3. Employees
+
+The Employees module provides a directory for reviewing and managing employee information.
+
+**Employee information includes:**
+
+- Full name
+- Email address
+- Department
+- Job title
+- Performance percentage
+- Goal completion percentage
+- Employment or availability status
+- Profile picture
+
+**Features:**
+
+- Add new employees.
+- Edit employee information through the employee form, where supported.
+- Upload a profile picture.
+- Preview an employee's profile image.
+- Restore the default avatar.
+- Search employees by name.
+- Filter employees by department.
+- Filter employees by status.
+- Clear active filters.
+- View the number of matching employee records.
+
+**Available departments:**
+
+Engineering, Marketing, Sales, Finance, HR, and Operations.
+
+**Available statuses:**
+
+- Active
+- On Leave
+- Remote
+
+The employee directory provides a structured way to review workforce information and access employee-related actions.
+
+### 4. Goals & KPIs
+
+The Goals & KPIs module provides an interface for managing objectives and monitoring progress.
+
+Each goal can include:
+
+- Goal title
+- Owner
+- Department
+- Due date
+- Priority
+- Progress percentage
+- Status
+
+**Goal management features:**
+
+- Create a new goal.
+- Enter the goal owner and department.
+- Set a target completion date.
+- Assign a priority level.
+- Record progress as a percentage.
+- Select a goal status.
+- Review goals in a structured table.
+- Edit or manage existing goals where supported by the application logic.
+
+**Priority levels:**
+
+- Low
+- Medium
+- High
+
+**Goal statuses:**
+
+- In Progress
+- Completed
+- At Risk
+
+This module is designed to help teams maintain visibility into objectives, deadlines, ownership, and progress.
+
+### 5. Attendance
+
+The Attendance module provides a dedicated workforce attendance dashboard.
+
+It combines summary cards, visual analytics, workforce distribution, and a searchable attendance table.
+
+**Attendance summary cards:**
+
+- Present Today
+- Remote Today
+- Late Arrivals
+- Attendance Health
+
+**Presence analytics:**
+
+The Presence Pulse chart is designed to visualize on-site and remote workforce headcount across the working week.
+
+The Today at a Glance panel presents a circular attendance indicator and a legend for:
+
+- Present employees
+- Remote employees
+- Employees on leave or absent
+
+**Attendance table fields:**
+
+- Employee
+- Department
+- Today's Status
+- Mode
+- Check-in
+- Present Days
+- Attendance Rate
+
+**Filtering and controls:**
+
+- Search by employee name.
+- Filter by department.
+- Filter by attendance status.
+- Clear all attendance filters.
+- Refresh attendance information.
+- Display the most recent update label.
+- Display a live tracking time indicator.
+
+**Attendance statuses include:**
+
+- Present
+- Remote
+- Late
+- Leave
+
+The attendance interface is intended to help managers review workforce availability and identify attendance exceptions.
+
+> The live tracking label and refresh controls describe the interface. Actual real-time attendance updates require an appropriate data source and refresh implementation.
+
+### 6. Reports
+
+The Reports module provides report-generation shortcuts and report-definition management.
+
+**Built-in report categories:**
+
+#### Monthly Team Performance
+Designed to summarize departmental performance metrics for the current month.
+
+#### Employee Engagement Summary
+Designed to present employee engagement metrics and survey-related trends.
+
+#### Attendance & Leave Audit
+Designed to summarize attendance, leave, remote work, and late-arrival information.
+
+**Saved Reports section:**
+
+The interface includes a table for managing report definitions with the following fields:
+
+- Report name
+- Report type
+- Frequency
+- Owner
+- Status
+- Actions
+
+**Available report types:**
+
+- Performance
+- Engagement
+- Attendance
+- Compliance
+- Custom
+
+**Available frequencies:**
+
+- Monthly
+- Weekly
+- Daily
+- On Demand
+
+**Available statuses:**
+
+- Active
+- Draft
+- Archived
+
+The module also provides controls for adding report definitions and accessing export options.
+
+Actual report content and generation behavior depend on the JavaScript implementation and the data available to the application.
+
+### 7. Settings
+
+The Settings module provides application-level preferences.
+
+**Available controls:**
+
+- Switch between light and dark themes.
+- Choose a theme through the settings dropdown.
+- Reset application data through the reset control.
+
+The settings interface is intended to provide convenient access to display preferences and application reset functionality.
+
+Use the reset action carefully, particularly if the application stores user-created data locally.
+
+---
+
+## 👥 User Roles and Permissions
+
+The dashboard includes a role selector with five role options.
+
+| Role | Intended Use |
+|---|---|
+| Admin | General administration and access to management functions |
+| HR Manager | Employee management and workforce oversight |
+| Department Manager | Department performance and goal management |
+| Team Lead | Team-level performance and goal tracking |
+| Employee | Individual workforce information and metrics |
+
+The interface contains role-related CSS classes, including:
+
+- `role-admin-hr`
+- `role-admin-mgr`
+
+These classes are used to identify certain controls associated with administrative or management roles.
+
+The role selector can be used to demonstrate different role-oriented experiences.
+
+**Important:** A role selector or CSS-based visibility rule is not a security boundary. In a production system, permissions must be enforced by a trusted backend, with server-side authorization for protected operations and data.
+
+---
+
+## 📊 Dashboard Analytics and KPIs
+
+PulseAnalytics organizes workforce analytics into four primary summary indicators.
+
+### Total Employees
+Represents the number of employees included in the workforce dataset.
+
+### Average Performance
+Represents an aggregated employee performance score, expressed as a percentage.
+
+### Goal Completion
+Represents the level of completion achieved across tracked goals.
+
+### Engagement Score
+Represents an employee engagement indicator.
+
+The dashboard also includes departmental comparisons and performance distribution charts to help communicate the overall workforce picture.
+
+### Reporting Periods
+
+The Overview page supports these date-range selections:
+
+- Last 7 Days
+- Last 30 Days
+- Last 90 Days
+
+For meaningful historical analytics, the underlying implementation should calculate metrics from timestamped records rather than simply changing the displayed date-range label.
+
+---
+
+## 🧑‍💼 Employee Management
+
+Employee management is centered on the employee directory and its modal form.
+
+The form accepts personal and work-related fields, including name, email, department, role title, performance score, goal completion score, and status.
+
+### Profile Image Handling
+
+The interface includes:
+
+- An avatar preview.
+- An image file input.
+- A default-avatar option.
+- A visual area for profile-image guidance.
+
+The file input accepts image files through the browser interface. Long-term storage of uploaded images depends on the implementation.
+
+### Employee Search and Filtering
+
+The directory provides a name-search field and department and status dropdowns.
+
+These controls are designed to help users narrow down the displayed employee list and locate relevant records more efficiently.
+
+---
+
+## 🎯 Goals and KPI Tracking
+
+The goal form collects the information required to define a measurable objective.
+
+Each goal has an owner, department, due date, priority, progress value, and status.
+
+The progress field accepts values between 0 and 100, allowing goals to be represented as percentages.
+
+This structure can support future capabilities such as:
+
+- Department-level goal completion summaries.
+- Overdue goal identification.
+- Progress history.
+- KPI ownership reports.
+- Goal completion notifications.
+- Performance review integration.
+
+These additional capabilities require corresponding application logic and, where applicable, persistent data storage.
+
+---
+
+## 🕒 Attendance Management
+
+The Attendance module is designed around workforce visibility.
+
+It combines employee-level attendance records with high-level summary indicators.
+
+Potential business uses include:
+
+- Reviewing daily presence.
+- Identifying late arrivals.
+- Comparing remote and on-site attendance.
+- Reviewing leave and absence records.
+- Monitoring attendance percentages.
+- Filtering attendance records by department.
+
+For a production implementation, attendance records should include a defined attendance date, employee identifier, check-in and check-out timestamps, status, and relevant leave information.
+
+Attendance rates should use a clearly defined calculation and exclude non-working days or approved leave according to the organization's policy.
+
+---
+
+## 📄 Reports and Data Export
+
+The export interface supports three format selections.
+
+### CSV
+CSV is suitable for spreadsheet applications and tabular data analysis.
+
+### JSON
+JSON is suitable for structured data exchange, development workflows, and integrations.
+
+### PDF
+PDF is suitable for documents intended for viewing, printing, or sharing in a fixed layout.
+
+The export dialog includes dataset selection for:
+
+- Employee Directory
+- Goals & Targets
+- Attendance Logs
+
+The application includes the jsPDF library for PDF generation.
+
+Export functionality should be tested for correct field selection, encoding, formatting, and handling of empty datasets.
+
+For sensitive workforce data, exports should also respect user permissions and avoid including unnecessary personal information.
+
+---
+
+## 🎨 User Interface and Experience
+
+The dashboard uses a modern administrative interface with clear navigation and reusable visual components.
+
+### Sidebar Navigation
+The sidebar provides access to the seven main modules.
+
+### Header
+The top header includes:
+
+- Current page title.
+- Breadcrumb navigation.
+- Global search.
+- Role selector.
+- Theme toggle.
+- Notifications dropdown.
+
+### KPI Cards
+Summary cards highlight important workforce indicators.
+
+### Interactive Charts
+Charts provide visual representations of trends and distributions.
+
+### Data Tables
+Structured tables display employees, goals, attendance records, and report definitions.
+
+### Modal Dialogs
+Modal forms support actions such as adding employees, creating goals, managing reports, and exporting data.
+
+### Notifications
+The notification dropdown provides a central interface for reviewing notifications and marking them as read.
+
+### Light and Dark Themes
+Users can switch the display theme through the header control or settings page.
+
+### Responsive Design
+The HTML includes mobile navigation controls and a mobile overlay to support a smaller-screen layout.
+
+Responsive behavior depends on the accompanying CSS implementation.
+
+---
+
+## 🛠️ Technologies Used
+
+### HTML5
+Provides the semantic structure of the application, including navigation, sections, tables, forms, dialogs, and dashboard components.
+
+### CSS3
+Used for styling, layouts, dashboard cards, responsive behavior, themes, tables, modals, and visual effects.
+
+The HTML references an external stylesheet named `style.css`.
+
+### JavaScript
+Provides the application behavior, including navigation, form handling, filtering, modal controls, notifications, theme changes, report generation, and export actions.
+
+The HTML references an external script named `script.js`.
+
+### Chart.js
+Used for creating data visualizations through HTML canvas elements.
+
+Charts represented in the HTML include:
+
+- Overview performance trend.
+- Performance distribution.
+- Department comparison.
+- Attendance presence pulse.
+
+### jsPDF
+A JavaScript library included for generating PDF documents in the browser.
+
+### Font Awesome
+Provides icons for navigation, buttons, KPI cards, notifications, attendance indicators, and other interface elements.
+
+### Google Fonts — Inter
+The Inter typeface is loaded to provide consistent typography.
+
+### Netlify
+The live application is hosted at:
+
+https://analyticsdashb.netlify.app/
+
+The hosting configuration should be checked in the repository to confirm the deployment workflow.
+
+---
+
+## 📁 Project Structure
+
+The basic project structure referenced by the HTML is:
+
+```text
+PulseAnalytics/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    └── (optional images, icons, or other local assets)
+```
+
+### File Descriptions
+
+**`index.html`**
+
+Contains the dashboard structure, sidebar navigation, header, seven application modules, tables, forms, modal dialogs, and external library references.
+
+**`style.css`**
+
+Contains the visual styling, responsive layouts, dashboard components, modal appearance, themes, and other presentation rules.
+
+**`script.js`**
+
+Contains the JavaScript application logic. The HTML references an `app` object for actions such as navigation, modal handling, employee and goal forms, attendance filtering, notifications, and data exports.
+
+**`README.md`**
+
+Documents the project, features, technologies, setup, usage, and future development plans.
+
+**`assets/`**
+
+An optional directory for local images, logos, screenshots, and other static resources.
+
+> The HTML references `style.css` and `script.js`. Confirm that these files exist in the repository and that their names and paths match exactly.
+
+---
+
+## 🚀 Getting Started
+
+You can run PulseAnalytics locally using a modern web browser.
+
+### Prerequisites
+
+- A modern web browser such as Chrome, Edge, Firefox, or Safari.
+- A code editor such as Visual Studio Code.
+- Git, if you want to clone the repository.
+- An internet connection for the external libraries, fonts, and avatar images loaded from CDNs.
+
+### Installation and Setup
+
+**Step 1: Clone the repository**
+
+Replace the placeholder URL below with your actual GitHub repository URL.
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+
+**Step 2: Open the project folder**
+
+```bash
+cd YOUR_REPOSITORY
+```
+
+**Step 3: Verify the project files**
+
+Ensure that `index.html`, `style.css`, and `script.js` are available in the expected locations.
+
+**Step 4: Run the application**
+
+You can open `index.html` directly in your browser.
+
+Alternatively, if you use Visual Studio Code, install the Live Server extension and select **Open with Live Server**.
+
+**Step 5: Explore the dashboard**
+
+Navigate through the available modules and test the interface controls, forms, filters, charts, theme settings, and export options.
+
+---
+
+## 🖱️ How to Use
+
+### Step 1: Open the Dashboard
+Visit the live demo or launch the application locally.
+
+### Step 2: Navigate Between Modules
+Use the sidebar to open Overview, Team Performance, Employees, Goals & KPIs, Attendance, Reports, or Settings.
+
+### Step 3: Review Analytics
+Examine the summary cards and charts on the Overview page.
+
+### Step 4: Manage Employees
+Open the Employees page, search or filter records, and use the Add Employee control if available.
+
+### Step 5: Track Goals
+Open Goals & KPIs to review objectives and use the goal form to create new goals where supported.
+
+### Step 6: Review Attendance
+Use the Attendance page to inspect workforce metrics and filter attendance records.
+
+### Step 7: Generate or Export Reports
+Open Reports to access report-generation controls and the dataset export dialog.
+
+### Step 8: Customize Preferences
+Use the theme toggle or Settings page to change the display theme.
+
+---
+
+## 💾 Data and Storage
+
+The HTML provides the interface for entering, displaying, and exporting employee, goal, attendance, and report information.
+
+However, the HTML alone does not establish how data is stored.
+
+Depending on the implementation in `script.js`, the application may use in-memory data, browser storage, or a connected backend.
+
+### Browser Storage
+If browser storage is implemented, data may remain available in the same browser after a refresh. Browser-local storage does not automatically synchronize records between different users or devices.
+
+### Backend Integration
+A production system can connect the dashboard to an API and database to support centralized records, authentication, permissions, and multi-user access.
+
+### Recommended Production Architecture
+
+```text
+User Interface
+      |
+      v
+HTML + CSS + JavaScript
+      |
+      v
+Authenticated Backend API
+      |
+      v
+Database
+      |
+      +---- Employee Records
+      +---- Department Records
+      +---- Goals and KPIs
+      +---- Attendance Logs
+      +---- Report Definitions
+```
+
+This architecture is a recommendation for future integration, not a claim that the current frontend already includes these services.
+
+---
+
+## 🌍 Deployment
+
+The project has a public deployment URL:
+
+https://analyticsdashb.netlify.app/
+
+### Deploying with Netlify
+
+1. Push the project files to a GitHub repository.
+2. Sign in to Netlify.
+3. Select the option to import an existing project.
+4. Connect the GitHub repository.
+5. Configure the publish directory to match the location of `index.html`.
+6. Deploy the site.
+7. Open the generated URL and verify the application.
+
+For a simple static HTML, CSS, and JavaScript project, a build command is generally unnecessary unless the repository includes a build process.
+
+After deployment, verify that the stylesheet, JavaScript file, charts, forms, and export functionality load correctly.
+
+---
+
+## 🔐 Security Considerations
+
+PulseAnalytics is presented as a workforce analytics interface. A production deployment should address the following security requirements.
+
+- Implement authentication before exposing private workforce information.
+- Enforce role-based authorization on the server.
+- Validate and sanitize user-provided input.
+- Protect employee information and email addresses.
+- Validate uploaded image files and their sizes.
+- Avoid storing secrets or API credentials in frontend JavaScript.
+- Apply access controls to exported reports.
+- Use HTTPS for communication with backend services.
+- Maintain audit logs for sensitive administrative operations.
+- Apply appropriate retention and privacy policies to attendance records.
+
+A frontend role selector is useful for demonstrations, but it cannot securely enforce permissions on its own.
+
+---
+
+## ⚠️ Limitations
+
+The following points should be verified against the complete JavaScript implementation before treating them as confirmed capabilities:
+
+- Whether employee, goal, attendance, and report data persist after a refresh.
+- Whether the dashboard uses real organizational data or sample data.
+- Whether the role selector enforces actual permissions or only changes the interface.
+- Whether attendance information is updated from a live data source.
+- Whether the date-range selector recalculates chart values and KPI metrics.
+- Whether all report-generation buttons produce complete reports.
+- Whether CSV, JSON, and PDF exports contain the expected fields.
+- Whether uploaded employee avatars persist after closing the browser.
+- Whether the dashboard is connected to a backend database or authentication service.
+
+These checks help distinguish a functional frontend demonstration from a fully integrated workforce management system.
+
+---
+
+## 🔮 Future Improvements
+
+PulseAnalytics can be extended into a more complete workforce analytics platform.
+
+### Authentication and Authorization
+Add secure login, logout, password management, and server-enforced permissions for each role.
+
+### Database Integration
+Connect employee, department, goal, attendance, and report records to a centralized database.
+
+### Real-Time Attendance
+Integrate attendance devices, check-in systems, or an attendance API to display current workforce information.
+
+### Advanced Analytics
+Add historical comparisons, monthly summaries, departmental rankings, and configurable performance indicators.
+
+### Employee Self-Service
+Provide employees with access to their own profiles, goals, attendance records, and performance summaries.
+
+### Leave Management
+Introduce leave requests, approval workflows, leave balances, and holiday calendars.
+
+### Notifications
+Add configurable reminders for upcoming deadlines, attendance exceptions, and overdue goals.
+
+### Advanced Reporting
+Support scheduled reports, custom date ranges, additional export formats, and printable report layouts.
+
+### Audit Trail
+Record important actions such as employee updates, goal changes, report generation, and administrative operations.
+
+### Accessibility
+Improve keyboard navigation, screen-reader support, contrast, and form validation messages.
+
+### Testing
+Add automated tests for calculations, filtering, form validation, permissions, and export functionality.
+
+---
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature suggestions are welcome.
+
+To contribute:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Implement your changes.
+4. Test the application in a browser.
+5. Commit your changes with a descriptive message.
+6. Open a pull request describing the improvements.
+
+Please keep changes focused and ensure the existing dashboard modules continue to work as expected.
+
+---
+
+## 📜 License
+
+A license has not been specified in the provided project HTML.
+
+Before publishing the repository for reuse, choose an appropriate license and add a `LICENSE` file.
+
+For example, the MIT License is commonly used for open-source projects that permit reuse, modification, and redistribution subject to its terms.
+
+Do not describe this project as MIT-licensed until you have actually added that license.
+
+---
+
+## 📬 Contact
+
+**Project:** PulseAnalytics — Team Analytics Dashboard
+
+**Live Demo:** https://analyticsdashb.netlify.app/
+
+For questions, bug reports, suggestions, or collaboration, please use the Issues section of the associated GitHub repository.
+
+---
+
+## ⭐ Support the Project
+
+If you find PulseAnalytics useful, consider starring the repository on GitHub.
+
+Your feedback and contributions can help improve the dashboard and expand its capabilities.
+
+**PulseAnalytics — Turning Workforce Data into Actionable Insights.**
